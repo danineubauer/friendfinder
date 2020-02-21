@@ -1,10 +1,10 @@
 //applicant data in an array:
 
-var applicantData = [
+var friendsArray = [
     {
       name: "Dana",
       photo: " ",
-      scores: :[
+      scores: [
          5,
          1,
          4,
@@ -20,7 +20,7 @@ var applicantData = [
   ];
   
 //export array:
-module.exports = applicantData;
+module.exports = friendsArray;
   
 
 //Convert user's results into an array of numbers [1,2,3]
