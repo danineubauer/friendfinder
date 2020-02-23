@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Friend Finder</title>
@@ -7,33 +8,36 @@
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css.css">
 
 </head>
+
 <body>
+  <br><br><br>
+  <div class="container" style="width: 700px">
 
-  <div class="container">
-
-    <div class="jumbotron">
-      <h1 class="text-center"><span class="fa fa-fire"></span>Friend Finder</h1>
-      <hr>
-      <h2 class="text-center">Find a friend by answering the questions in the survey.</h2>
-      <br>
-
+    <div class="jumbotron text-center">
+      <h1 class="text-center">
+        <span class="fa fa-fire"></span>Friend Finder</h1>
+      <h4 class="text-center">Find a friend by answering the questions in the survey.</h4>
       <div class="text-center">
-        <a href="/survey"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span>Answer Survey</button></a>
+        <a href="/survey"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span>Answer
+            Survey</button></a>
       </div>
-
+      <div>
+        <hr>
+        <br>
+        <button id='home'>Home</button>
+        <button id='github'>Friends</button>
+        <button id='github'> GitHub</button>
+        <br>
+        <a href="/api/tables">API Table Link</a> |
+        <a href="/api/waitlist">API Wait List</a>
+        <br>
+      </div>
     </div>
-
-    <footer class="footer">
-      <div class="container">
-        <p><a href="/api/friendlist">API Friend List</a> | <a href="https://github.com/danineubauer/friendfinder">GitHub Repo</a>
-
-        </div>
-    </footer>
-
   </div>
 
-
 </body>
+
 </html>
