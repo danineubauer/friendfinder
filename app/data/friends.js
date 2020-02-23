@@ -1,6 +1,6 @@
 //applicant data in an array:
 
-var friendsArray = [
+var friends = [
     {
       name: "Dana",
       photo: " ",
@@ -20,7 +20,7 @@ var friendsArray = [
   ];
   
 //export array:
-module.exports = friendsArray;
+module.exports = friends;
   
 
 //Convert user's results into an array of numbers [1,2,3]
