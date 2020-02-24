@@ -6,17 +6,21 @@
   <title>Friend finder survey</title>
 
   <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/css.css">
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO'
+  crossorigin='anonymous'>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="/css.css"> -->
 
 </head>
 
 <body>
   <br><br><br>
-  <div class="container" style="width: 700px">
+  <div class="container-fluid" style="width: 700px">
 
     <div class="jumbotron text-center">
       <h1 class="text-center">
@@ -39,7 +43,7 @@
             <form role="form">
               <div class="form-group">
                 <label for="friend-name">Name (Required)</label>
-                <input type="text" class="form-control" id="friend-name" required>
+                <input type="text" class="form-control" id="name" required>
               </div>
               <div class="form-group">
                 <label for="photo-link">Link to Photo Image (Required)</label>
@@ -52,14 +56,15 @@
 
                 <h5>Question 1</h5>
                 <label for="q1">You like working out at the gym</label>
-                <select class="form-control" id="q1">
+                <select class="question form-control" id="question1">
 
-                  <option selected>Select (1 = disagree, 5 = agree)</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option value=''>Choose Value</option>
+                  <option value='1'>1 (Strongly Disagree)</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5 (Strongly Agree)</option>
+
                 </select>
               </div>
 
@@ -67,14 +72,15 @@
                 <h5>Question 2</h5>
 
                 <label for="q2">You love the ocean</label>
-                <select class="form-control" id="q2">
-                  <option selected>Select (1 = disagree, 5 = agree)</option>
+                <select class="question form-control" id="question2">
 
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option value=''>Choose Value</option>
+                  <option value='1'>1 (Strongly Disagree)</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5 (Strongly Agree)</option>
+                  
                 </select>
               </div>
 
@@ -82,14 +88,14 @@
                 <h5>Question 3</h5>
 
                 <label for="q3">You love reading books</label>
-                <select class="form-control" id="q3">
+                <select class="question form-control" id="question3">
 
-                  <option selected>Select (1 = disagree, 5 = agree)</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option value=''>Choose Value</option>
+                  <option value='1'>1 (Strongly Disagree)</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5 (Strongly Agree)</option>
                 </select>
               </div>
 
@@ -97,14 +103,14 @@
                 <h5>Question 4</h5>
 
                 <label for="q4">You like pets</label>
-                <select class="form-control" id="q4">
-                  <option selected>Select (1 = disagree, 5 = agree)</option>
-
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                <select class="question form-control" id="question4">
+                  <option value=''>Choose Value</option>
+                  <option value='1'>1 (Strongly Disagree)</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5 (Strongly Agree)</option>
+                  
                 </select>
               </div>
 
@@ -112,14 +118,13 @@
                 <h5>Question 5</h5>
 
                 <label for="q5">You like going out with your friends</label>
-                <select class="form-control" id="q5">
-
-                  <option selected>Select (1 = disagree, 5 = agree)</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                <select class="question form-control" id="question5">
+                  <option value=''>Choose Value</option>
+                  <option value='1'>1 (Strongly Disagree)</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5 (Strongly Agree)</option>
                 </select>
               </div>
 
@@ -128,14 +133,13 @@
                 <h5>Question 6</h5>
 
                 <label for="q6">You like to cook at home</label>
-                <select class="form-control" id="q6">
-
-                  <option selected>Select (1 = disagree, 5 = agree)</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                <select class="question form-control" id="question6">
+                  <option value=''>Choose Value</option>
+                  <option value='1'>1 (Strongly Disagree)</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5 (Strongly Agree)</option>
                 </select>
               </div>
 
@@ -143,14 +147,14 @@
                 <h5>Question 7</h5>
 
                 <label for="q7">You are very social and enjoy company</label>
-                <select class="form-control" id="q7">
+                <select class="question form-control" id="question7">
 
-                  <option selected>Select (1 = disagree, 5 = agree)</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option value=''>Choose Value</option>
+                  <option value='1'>1 (Strongly Disagree)</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5 (Strongly Agree)</option>
                 </select>
               </div>
 
@@ -159,14 +163,13 @@
                 <h5>Question 8</h5>
 
                 <label for="q8">You like going on hikes</label>
-                <select class="form-control" id="q8">
-
-                  <option selected>Select (1 = disagree, 5 = agree)</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                <select class="question form-control" id="question8">
+                  <option value=''>Choose Value</option>
+                  <option value='1'>1 (Strongly Disagree)</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5 (Strongly Agree)</option>
                 </select>
               </div>
 
@@ -174,14 +177,14 @@
                 <h5>Question 9</h5>
 
                 <label for="q9">You love being with your family</label>
-                <select class="form-control" id="q9">
+                <select class="question form-control" id="question9">
 
-                  <option selected>Select (1 = disagree, 5 = agree)</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option value=''>Choose Value</option>
+                  <option value='1'>1 (Strongly Disagree)</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5 (Strongly Agree)</option>
                 </select>
               </div>
 
@@ -190,19 +193,19 @@
                 <h5>Question 10</h5>
 
                 <label for="q10">You are a big talker</label>
-                <select class="form-control" id="q10">
+                <select class="question form-control" id="question10">
 
-                  <option selected>Select (1 = disagree, 5 = agree)</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                  <option value=''>Choose Value</option>
+                  <option value='1'>1 (Strongly Disagree)</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5 (Strongly Agree)</option>
                 </select>
               </div>
 
 
-              <button type="submit" class="btn btn-primary submit">Submit</button>
+              <button type='submit' class='btn btn-primary btn-lg' id='submitForm'>Submit</button>
             </form>
           </div>
         </div>
@@ -210,53 +213,96 @@
     </div>
   </div>
 
+  <!-- pop up -->
+  <div class="modal fade bd-example-modal-lg" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Your New Friend!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body" id='modal-body1'>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
 </body>
 
 </html>
 
 <script type="text/javascript">
 
-  $(".submit").on("click", function (event) {
-    event.preventDefault();
+let scores = []
 
-    //grab form elements
-    var applicantSurvey = {
-      customerName: $("#friend-name").val().trim(),
-      phoneNumber: $("#photo-link").val().trim(),
-      question1: $("q1").val().trim(),
-      question2: $("q1").val().trim(),
-      question3: $("q1").val().trim(),
-      question4: $("q1").val().trim(),
-      question5: $("q1").val().trim(),
-      question6: $("q1").val().trim(),
-      question7: $("q1").val().trim(),
-      question8: $("q1").val().trim(),
-      question9: $("q1").val().trim(),
-      question10: $("q1").val().trim(),
+function scoresKey(value) {
+    for (i = 1; i < 11; i++) {
+        if (value === 'take') {
+            scores.push($(`#question${i}`).val().trim());
+        };
+        if (value === 'clear') {
+            $(`#question${i}`).val('');
+        };
+        if (value === 'validate') {
+            if ($(`#question${i}`).val() === '') {
+                return i;
+            };
+        };
     };
+};
+//   //validate: 
+  function validate() { 
+    try { 
+      if (!$('#name').val().trim()) { throw 'enter a name'}
+      if (!$('#photo-link').val().trim()) { throw 'input a valid photo url'}
+      if (scoresKey('validate')) { throw `answer question ${i}`}; 
+    } catch (err) { 
+      alert(`please ${err}`); 
+      return false; 
+    }; 
+    return true; 
+  }
 
-    console.log(newSurvey);
+  $('#submitForm').on('click', function (event) {
+        event.preventDefault();
+        console.log('submit clicked')
+        if (!(validate())) { return; };
+        console.log('data vald')
+        scoresKey('take');
+        const newFriend = {
+            name: $('#name').val().trim(),
+            photo: $('#photo-link').val().trim(),
+            scores: scores
+        };
 
-    $.post("/api/friend", newSurvey,
-      function (data) {
+        $.post('/api/friends', newFriend, function (data) {
+          console.log('posting new friend')
+            $('#name').val('');
+            $('#photo-link').val('');
+            scoresKey('clear');
+            scores = [];
+        }).then(
+            $.get('/api/friends/match', function (data) {
+                let matchName = $('<h3>');
+                matchName.text(data[0].name);
+                $('#modal-body1').append(matchName);
+                let matchPic = $('<img>');
+                matchPic.attr('src', data[0].photo);
+                matchPic.attr('alt', 'Match-image');
+                matchPic.addClass('match-image');
+                $('#modal-body1').append(matchPic);
+                $('#modal').modal();
+            })
+        );
+    });
 
-        if (data) {
-          alert("Yay! You are officially booked!");
-        }
 
-        // If a table is available... tell user they on the waiting list.
-        else {
-          alert("Sorry you are on the wait list");
-        }
-
-        // Clear the form when submitting
-        $("#friend-name").val("");
-        $("#photo-link").val("");
-        $("#q1").val("");
-        $("#a2").val("");
-
-      });
-
-  });
 
 </script>

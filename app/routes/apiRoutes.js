@@ -4,31 +4,18 @@ const friends = require("../data/friends");
 module.exports = function(app) {
 
   app.get("/api/friends", function(req, res) {
-    console.log('getting data')
+    console.log('displaying friends data')
     res.json(friends);
   });
 
+  // app.get('/api/friends/match', function(req, res) { 
+  //   res.json(friends.matchMaker()); 
+  // })
+
   app.post('api/friends', function(req, res) { 
-    console.log('posting all friends data')
+    console.log('adding new friend to friends array')
     friends.push(req.body); 
     res.json(true);
   })
 }
-  // app.post("/api/friends", function(req, res) { 
-  //   if (friendsList.length <3 ) { 
-  //     friendsList.push(req.body); 
-  //     res.json(true); 
-  //   }
-  //   else { 
-  //     friendsList.push(req.body)
-  //     res.json(false);
-  //   }
-  // })
-
-  // app.post("/api/clear", function(req, res) {
-  //   // Empty out the arrays of data
-  //   tableData.length = 0;
-  //   waitListData.length = 0;
-
-  //   res.json({ ok: true });
-  // });
+ 
