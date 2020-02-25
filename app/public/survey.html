@@ -83,7 +83,7 @@
                   
                 </select>
               </div>
-
+<!-- 
               <div class="form-group">
                 <h5>Question 3</h5>
 
@@ -202,7 +202,7 @@
                   <option value='4'>4</option>
                   <option value='5'>5 (Strongly Agree)</option>
                 </select>
-              </div>
+              </div> -->
 
 
               <button type='submit' class='btn btn-primary btn-lg' id='submitForm'>Submit</button>
@@ -238,17 +238,18 @@
 
 </html>
 
-<script type="text/javascript">
+<script>
 
 let scores = []
 
 function scoresKey(value) {
-    for (i = 1; i < 11; i++) {
+    for (i = 1; i < 1; i++) {
         if (value === 'take') {
             scores.push($(`#question${i}`).val().trim());
         };
         if (value === 'clear') {
             $(`#question${i}`).val('');
+            console.log('scoreskey - clear')
         };
         if (value === 'validate') {
             if ($(`#question${i}`).val() === '') {
@@ -274,14 +275,14 @@ function scoresKey(value) {
         event.preventDefault();
         console.log('submit clicked')
         if (!(validate())) { return; };
-        console.log('data vald')
+        console.log('data valid')
         scoresKey('take');
+        console.log('creating new friend to add to list')
         const newFriend = {
             name: $('#name').val().trim(),
             photo: $('#photo-link').val().trim(),
             scores: scores
         };
-
         $.post('/api/friends', newFriend, function (data) {
           console.log('posting new friend')
             $('#name').val('');
@@ -297,6 +298,7 @@ function scoresKey(value) {
                 matchPic.attr('src', data[0].photo);
                 matchPic.attr('alt', 'Match-image');
                 matchPic.addClass('match-image');
+                matchPic.attr('style', 'width: 400px;')
                 $('#modal-body1').append(matchPic);
                 $('#modal').modal();
             })
